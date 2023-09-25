@@ -1,8 +1,9 @@
-# vxTwitter Docker
+# vxX Docker
 
 ## Configuration
 
 Setup mongodb in `config.json`:
+
 ```json
 {
     "config":{
@@ -15,6 +16,7 @@ Setup mongodb in `config.json`:
 ```
 
 Use TCP socket for uwsgi `twitfix.ini`:
+
 ```ini
 [uwsgi]
 module = wsgi:app
@@ -34,7 +36,7 @@ die-on-term = true
 ## Run
 
 To run and build, use this command:
+
 ```bash
 docker-compose up -d --build
 ```
-

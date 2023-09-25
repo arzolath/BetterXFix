@@ -4,14 +4,13 @@ permissions:
   id-token: write
   contents: read
 
-concurrency: 
+concurrency:
   group: prod
   cancel-in-progress: true
 
 on:
   push:
     branches: [prod]
-
 
 jobs:
   deploy:
@@ -23,8 +22,8 @@ jobs:
       - name: Configure Node
         uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
-          cache: 'npm'
+          node-version: "16.x"
+          cache: "npm"
 
       - name: Install packages
         run: npm install -g serverless
@@ -49,21 +48,21 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::001057775987:role/GithubActionsOIDC-vxtwitter-Role-ZYPHWRSFIP80
+          role-to-assume: arn:aws:iam::001057775987:role/GithubActionsOIDC-vxx-Role-ZYPHWRSFIP80
           role-duration-seconds: 900
           aws-region: us-east-1
 
       - name: Deploy
         run: serverless deploy --verbose
         env:
-          VXTWITTER_LINK_CACHE: ${{ secrets.VXTWITTER_LINK_CACHE }}
-          VXTWITTER_DATABASE: ${{ secrets.VXTWITTER_DATABASE }}
-          VXTWITTER_METHOD: ${{ secrets.VXTWITTER_METHOD }}
-          VXTWITTER_COLOR: ${{ secrets.VXTWITTER_COLOR }}
-          VXTWITTER_APP_NAME: ${{ secrets.VXTWITTER_APP_NAME }}
-          VXTWITTER_REPO: ${{ secrets.VXTWITTER_REPO }}
-          VXTWITTER_URL: ${{ secrets.VXTWITTER_URL }}
-          VXTWITTER_COMBINATION_METHOD: ${{ secrets.VXTWITTER_COMBINATION_METHOD }}
-          VXTWITTER_GIF_CONVERT_API: ${{ secrets.VXTWITTER_GIF_CONVERT_API }}
-          VXTWITTER_WORKAROUND_TOKENS: ${{ secrets.VXTWITTER_WORKAROUND_TOKENS }}
-          VXTWITTER_PROXIES: ${{ secrets.VXTWITTER_PROXIES }}
+          VXX_LINK_CACHE: ${{ secrets.VXX_LINK_CACHE }}
+          VXX_DATABASE: ${{ secrets.VXX_DATABASE }}
+          VXX_METHOD: ${{ secrets.VXX_METHOD }}
+          VXX_COLOR: ${{ secrets.VXX_COLOR }}
+          VXX_APP_NAME: ${{ secrets.VXX_APP_NAME }}
+          VXX_REPO: ${{ secrets.VXX_REPO }}
+          VXX_URL: ${{ secrets.VXX_URL }}
+          VXX_COMBINATION_METHOD: ${{ secrets.VXX_COMBINATION_METHOD }}
+          VXX_GIF_CONVERT_API: ${{ secrets.VXX_GIF_CONVERT_API }}
+          VXX_WORKAROUND_TOKENS: ${{ secrets.VXX_WORKAROUND_TOKENS }}
+          VXX_PROXIES: ${{ secrets.VXX_PROXIES }}

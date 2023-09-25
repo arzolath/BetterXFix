@@ -136,7 +136,7 @@ def extractStatus_syndication(url,workaroundTokens=None):
     return output
 
 def extractStatus_twExtractProxy(url,workaroundTokens=None):
-    proxies = os.getenv("VXTWITTER_PROXIES",None)
+    proxies = os.getenv("VXX_PROXIES",None)
     if proxies is None:
         raise TwExtractError(400, "Extract error")
     proxies = proxies.split(',')
@@ -269,5 +269,5 @@ def lambda_handler(event, context):
     url = event["queryStringParameters"].get("url","")
     return {
         'statusCode': 200,
-        'body': extractStatus(url,workaroundTokens=os.getenv("VXTWITTER_WORKAROUND_TOKENS",None).split(','))
+        'body': extractStatus(url,workaroundTokens=os.getenv("VXX_WORKAROUND_TOKENS",None).split(','))
     }

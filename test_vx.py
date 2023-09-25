@@ -32,7 +32,7 @@ testMultiMedia_compare={'tweet': 'https://twitter.com/Twitter/status/11541723245
 testPoll_comparePoll={"name":"poll2choice_text_only","binding_values":{"choice1_label":{"type":"STRING","string_value":"Mean one thing"},"choice2_label":{"type":"STRING","string_value":"Mean multiple things"},"end_datetime_utc":{"type":"STRING","string_value":"2015-10-06T22:57:24Z"},"counts_are_final":{"type":"BOOLEAN","boolean_value":True},"choice2_count":{"type":"STRING","string_value":"33554"},"choice1_count":{"type":"STRING","string_value":"124875"},"last_updated_datetime_utc":{"type":"STRING","string_value":"2015-10-06T22:57:31Z"},"duration_minutes":{"type":"STRING","string_value":"1440"}}}
 testPoll_comparePollVNF={'total_votes': 158429, 'choices': [{'text': 'Mean one thing', 'votes': 124875, 'percent': 78.8}, {'text': 'Mean multiple things', 'votes': 33554, 'percent': 21.2}]}
 
-tokens=os.getenv("VXTWITTER_WORKAROUND_TOKENS",None).split(',')
+tokens=os.getenv("VXX_WORKAROUND_TOKENS",None).split(',')
 
 def compareDict(original,compare):
     for key in original:

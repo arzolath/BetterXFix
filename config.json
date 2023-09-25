@@ -1,15 +1,15 @@
 {
-    "config": {
-        "appname": "vxTwitter",
-        "color": "#43B581",
-        "database": "[url to mongo database goes here]",
-        "link_cache": "ram",
-        "method": "hybrid",
-        "repo": "https://github.com/dylanpdx/BetterTwitFix",
-        "table": "[database table here]",
-        "url": "https://vxtwitter.com",
-        "combination_method": "local",
-        "gifConvertAPI": "local",
-        "workaroundTokens":null
-    }
+  "config": {
+    "appname": "vxX",
+    "color": "#43B581",
+    "database": "[url to mongo database goes here]",
+    "link_cache": "ram",
+    "method": "hybrid",
+    "repo": "https://github.com/arzolath/BetterXFix",
+    "table": "[database table here]",
+    "url": "https://vxx.com",
+    "combination_method": "local",
+    "gifConvertAPI": "local",
+    "workaroundTokens": null
+  }
 }

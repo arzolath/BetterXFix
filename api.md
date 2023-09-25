@@ -1,8 +1,9 @@
 ## API
 
-The VXTwitter API currently returns information about tweets. If you want more functionality added, please [Open an issue!](https://github.com/dylanpdx/BetterTwitFix/issues)
+The VXX API currently returns information about tweets. If you want more functionality added, please [Open an issue!](https://github.com/arzolath/BetterXFix/issues)
 
 The following fields are returned:
+
 ```js
 {
     "date": "Wed Oct 05 18:40:30 +0000 2022", // Date the tweet was posted
@@ -25,7 +26,7 @@ The following fields are returned:
             "url": "https://pbs.twimg.com/media/FeU5fhPXkCoZXZB.jpg" // direct URL to the media
         },
         {
-            "altText": "GIF of Laura Dern in Jurassic Park as Dr. Ellie Sattler taking off her sunglasses in shock", 
+            "altText": "GIF of Laura Dern in Jurassic Park as Dr. Ellie Sattler taking off her sunglasses in shock",
             "duration_millis": 0, // duration of the video in milliseconds. This can be 0 if Twitter doesn't provide it (i.e gifs)
             "size": { // Width and Height of the original video
                 "height": 206,

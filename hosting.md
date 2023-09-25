@@ -1,6 +1,7 @@
 ## Hosting
 
 ### Ubuntu Linux Server
+
 The following instructions were tested with Ubuntu 22.10, and assumes a stock OS
 
 Edit config.json to fit your setup
@@ -9,8 +10,8 @@ First, get everything updated by running `sudo apt-get update`
 
 Verify Python is installed by running `python3 --version` or `python --version`. Versions 3.8, 3.9, and 3.10 are supported (This includes versions like 3.10.7)
 
-Run the following command: `git clone https://github.com/dylanpdx/BetterTwitFix`
-This will download all the code for vxTwitter. Once that is done, you can run `cd BetterTwitFix` to enter the newly downloaded folder. 
+Run the following command: `git clone https://github.com/arzolath/BetterXFix`
+This will download all the code for vxX. Once that is done, you can run `cd BetterTwitFix` to enter the newly downloaded folder.
 
 Install pip and venv by running the following command: `apt install python3-pip python3-venv`
 
@@ -31,21 +32,25 @@ this script uses the youtube-dl python module, along with flask, twitter and pym
 After that, you need to set up an nginx proxy to point towards `/tmp/twitfix.sock`, which isn't covered here.
 
 ### Docker Setup
+
 The following instructions were tested with Ubuntu 22.10, and assumes a stock OS
 
 Edit config.json to fit your setup
 
-First, install docker by following these instructions: [Install using the apt repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) 
+First, install docker by following these instructions: [Install using the apt repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
-Run the following command: `git clone https://github.com/dylanpdx/BetterTwitFix`
-This will download all the code for vxTwitter. Once that is done, you can run `cd BetterTwitFix` to enter the newly downloaded folder. 
+Run the following command: `git clone https://github.com/arzolath/BetterXFix`
+This will download all the code for vxX. Once that is done, you can run `cd BetterTwitFix` to enter the newly downloaded folder.
 
 Remove the following lines in twitfix.ini:
+
 ```ini
 socket = /var/run/twitfix.sock
 chmod-socket = 660
 ```
+
 and replace with
+
 ```ini
 socket = 0.0.0.0:9000
 buffer-size = 8192
@@ -54,12 +59,13 @@ buffer-size = 8192
 Finally, run this command to set up everything through Docker: `docker-compose up -d --build`
 
 ### Serverless Setup
+
 This assumes your AWS credentials are set up
 
-Run the following command: `git clone https://github.com/dylanpdx/BetterTwitFix`
+Run the following command: `git clone https://github.com/arzolath/BetterXFix`
 
 Enter into that directory and install serverless framework into it by running `npm install -g serverless`
 
 Then run `serverless deploy`
 
-Finally, set up a new API gateway resource to point towards the main Lambda function (should start with vxTwitter) 
+Finally, set up a new API gateway resource to point towards the main Lambda function (should start with vxX)
